@@ -13,6 +13,11 @@ TextStyle kButtonTextStyle = GoogleFonts.poppins(
   fontSize: 30.0,
 );
 
+TextStyle kHeadingStyle = GoogleFonts.poppins(
+  fontSize: 30.0, 
+  fontWeight: FontWeight.bold, 
+);
+
 TextStyle kConditionTextStyle = GoogleFonts.poppins(
   fontSize: 100.0,
 );
