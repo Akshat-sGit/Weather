@@ -2,20 +2,25 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 TextStyle kTempTextStyle = GoogleFonts.poppins(
-  fontSize: 100.0,
+  fontSize: 40.0,
+  fontWeight: FontWeight.bold, 
 );
 
 TextStyle kMessageTextStyle = GoogleFonts.poppins(
-  fontSize: 60.0,
+  fontSize: 30.0,
+  fontWeight: FontWeight.bold, 
 );
 
 TextStyle kButtonTextStyle = GoogleFonts.poppins(
   fontSize: 30.0,
+  color: Colors.white, 
+  fontWeight: FontWeight.w600,
 );
 
 TextStyle kHeadingStyle = GoogleFonts.poppins(
   fontSize: 30.0, 
   fontWeight: FontWeight.bold, 
+  color: Colors.black, 
 );
 
 TextStyle kConditionTextStyle = GoogleFonts.poppins(
@@ -27,7 +32,7 @@ InputDecoration kTextFieldInputDecoration = InputDecoration(
   fillColor: Colors.white,
   icon:const Icon(
     Icons.location_city,
-    color: Colors.white,
+    color: Colors.grey,
   ),
   hintText: 'Enter City Name',
   hintStyle: GoogleFonts.poppins(

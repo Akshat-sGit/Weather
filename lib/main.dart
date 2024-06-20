@@ -1,18 +1,26 @@
 import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart';
-// import 'package:weather_app/screens/city_screen.dart';
-// import 'package:weather_app/screens/location_screen.dart';
 import 'package:weather_app/screens/loading_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Geolocator.openAppSettings(); // Initialize Geolocator
+  await _checkLocationPermission();
   runApp(const MyApp());
 }
+
+Future<void> _checkLocationPermission() async {
+  LocationPermission permission = await Geolocator.checkPermission();
+  if (permission == LocationPermission.denied) {
+    permission = await Geolocator.requestPermission();
+  }
+  if (permission == LocationPermission.deniedForever) {
+    throw Error ;
+  }
+}
+
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(

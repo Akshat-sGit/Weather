@@ -16,6 +16,16 @@ class _CityScreenState extends State<CityScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.grey,
+        title: Text("Select City", style: kHeadingStyle,), 
+        leading: IconButton(
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          icon: const Icon(Icons.arrow_back_ios_new),
+        ),
+      ),
       body: Container(
         decoration: const BoxDecoration(
           image: DecorationImage(
@@ -27,18 +37,6 @@ class _CityScreenState extends State<CityScreen> {
         child: SafeArea(
           child: Column(
             children: <Widget>[
-              Align(
-                alignment: Alignment.topLeft,
-                child: TextButton(
-                  onPressed: () {
-                    Navigator.pop(context);
-                  },
-                  child: const Icon(
-                    Icons.arrow_back_ios,
-                    size: 50.0,
-                  ),
-                ),
-              ),
               Container(
                 padding: const EdgeInsets.all(20.0),
                 child: TextField(
@@ -51,7 +49,14 @@ class _CityScreenState extends State<CityScreen> {
                   },
                 ),
               ),
-              TextButton(
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.grey,
+                  shadowColor: Colors.black,
+                  shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10),
+                        side: const BorderSide(color: Colors.grey, width: 1))
+                ),
                 onPressed: () {
                   Navigator.pop(context, cityName);
                 },

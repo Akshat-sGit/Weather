@@ -10,11 +10,24 @@ class LoadingScreen extends StatefulWidget {
   State<LoadingScreen> createState() => _LoadingScreenState();
 }
 
-class _LoadingScreenState extends State<LoadingScreen> {
+class _LoadingScreenState extends State<LoadingScreen> with SingleTickerProviderStateMixin {
+  late AnimationController _controller;
+
   @override
   void initState() {
     super.initState();
+    _controller = AnimationController(
+      vsync: this,
+      duration:const Duration(milliseconds: 1200),
+    );
+    _controller.repeat();
     getLocationData();
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
   }
 
   void getLocationData() async {
@@ -31,11 +44,12 @@ class _LoadingScreenState extends State<LoadingScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body: Center(
-        child: SpinKitDoubleBounce(
-          color: Colors.white,
-          size: 100.0,
+        child: SpinKitSquareCircle(
+          color: Colors.red,
+          size: 50.0,
+          controller: _controller,
         ),
       ),
     );
