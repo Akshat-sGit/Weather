@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:geolocator/geolocator.dart';
 // import 'package:weather_app/screens/city_screen.dart';
-import 'package:weather_app/screens/location_screen.dart';
-// import 'package:weather_app/screens/loading_screen.dart';
+// import 'package:weather_app/screens/location_screen.dart';
+import 'package:weather_app/screens/loading_screen.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Geolocator.openAppSettings(); // Initialize Geolocator
   runApp(const MyApp());
 }
-
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -19,7 +21,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const LocationScreen(),
+      home: const LoadingScreen(),
     );
   }
 }
