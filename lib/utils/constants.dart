@@ -7,12 +7,12 @@ TextStyle kTempTextStyle = GoogleFonts.poppins(
 );
 
 TextStyle kMessageTextStyle = GoogleFonts.poppins(
-  fontSize: 30.0,
+  fontSize: 20.0,
   fontWeight: FontWeight.bold, 
 );
 
 TextStyle kButtonTextStyle = GoogleFonts.poppins(
-  fontSize: 30.0,
+  fontSize: 20.0,
   color: Colors.white, 
   fontWeight: FontWeight.w600,
 );
@@ -29,18 +29,14 @@ TextStyle kConditionTextStyle = GoogleFonts.poppins(
 
 InputDecoration kTextFieldInputDecoration = InputDecoration(
   filled: true,
-  fillColor: Colors.white,
-  icon:const Icon(
-    Icons.location_city,
-    color: Colors.grey,
-  ),
+  fillColor: Colors.black,
   hintText: 'Enter City Name',
   hintStyle: GoogleFonts.poppins(
     color: Colors.grey,
   ),
   border:const OutlineInputBorder(
     borderRadius: BorderRadius.all(
-      Radius.circular(10.0),
+      Radius.circular(20.0),
     ),
     borderSide: BorderSide.none,
   ),

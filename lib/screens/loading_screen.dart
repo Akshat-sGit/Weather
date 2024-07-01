@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
-import 'package:weather_app/screens/location_screen.dart';
-import 'package:weather_app/services/weather.dart';
+import 'package:weather_app/screens/city_screen.dart';
 
 class LoadingScreen extends StatefulWidget {
   const LoadingScreen({super.key});
@@ -18,10 +17,10 @@ class _LoadingScreenState extends State<LoadingScreen> with SingleTickerProvider
     super.initState();
     _controller = AnimationController(
       vsync: this,
-      duration:const Duration(milliseconds: 1200),
+      duration: const Duration(milliseconds: 1200),
     );
     _controller.repeat();
-    getLocationData();
+    loadInitialScreen();
   }
 
   @override
@@ -30,26 +29,34 @@ class _LoadingScreenState extends State<LoadingScreen> with SingleTickerProvider
     super.dispose();
   }
 
-  void getLocationData() async {
-    var weatherData = await WeatherModel().getLocationWeather();
+  void loadInitialScreen() async {
+    // Simulate loading process
+    await Future.delayed(const Duration(seconds: 2)); // Simulate delay for loading
 
     if (!mounted) return;
 
-    Navigator.push(context, MaterialPageRoute(builder: (context) {
-      return LocationScreen(
-        locationWeather: weatherData,
-      );
+    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) {
+      return const CityScreen();
     }));
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: SpinKitSquareCircle(
-          color: Colors.red,
-          size: 50.0,
-          controller: _controller,
+      body: Container(
+        decoration: const BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: [Colors.blue, Colors.yellow],
+          ),
+        ),
+        child: Center(
+          child: SpinKitCubeGrid(
+            color: Colors.black,
+            size: 50.0,
+            controller: _controller,
+          ),
         ),
       ),
     );

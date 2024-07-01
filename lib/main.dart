@@ -14,7 +14,7 @@ Future<void> _checkLocationPermission() async {
     permission = await Geolocator.requestPermission();
   }
   if (permission == LocationPermission.deniedForever) {
-    throw Error ;
+    throw Error();
   }
 }
 
@@ -29,6 +29,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
+      debugShowCheckedModeBanner: false,
       home: const LoadingScreen(),
     );
   }
