@@ -39,7 +39,7 @@ This screen has a text field where you can search for the name of the city. Ther
 <img src="https://github.com/Akshat-sGit/Weather/assets/99307359/f17b6083-8ff7-4bd4-8116-99300f62b109" width="300">
 
 ### 3. Location Screen:    
-This is the main screen of the app where you can see the weather details of the current location. There are two icons at the top right corner: one to get back to the current location and another to navigate to the city screen, where you can search for any location's weather.
+This is the main screen of the app where you can see the weather details of the current location. There are two icons at the top right corner: one to reload the weather conditions of the location and another to navigate to the city screen, where you can search for any location's weather.
 
 <img src="https://github.com/Akshat-sGit/Weather/assets/99307359/3146789b-e63e-499c-bc34-1f0b122e0536" width="300">
 
