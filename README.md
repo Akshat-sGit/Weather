@@ -28,27 +28,21 @@ A simple weather forecast application for Android using Flutter. The application
 ## How the app looks 
 The app consists of 3 screens in total: 
 ### 1. Loading Screen:
-This is the loading screen rendered at the start of the application. It uses the `flutter_spinkit` library.
+This is the loading screen rendered at the start of the application. It uses the **flutter_spinkit** library.
 
-![Screenshot_1718895830](https://github.com/Akshat-sGit/Weather/assets/99307359/823e1cc0-3a7c-47c7-9a09-9531619f16d4)
-### 2. Location Screen:    
-This is the main screen of the app where you can see the weather of the current location. There are two icons at the top right corner: one to get back to the current location and another to navigate to the city screen, where you can search for any location's weather.
-    
-![Screenshot_1718895838](https://github.com/Akshat-sGit/Weather/assets/99307359/81c1910e-06e1-45e4-959f-6f4c31fa8afa)
+<img src="https://github.com/Akshat-sGit/Weather/assets/99307359/a5905ba1-1bfb-485c-9b93-309519afc829" width="300">
 
-### 3. City Screen: 
+### 2. City Screen: 
 This screen has a text field where you can search for the name of the city. There is also a button to get weather details for the specified city.
 
-![Screenshot_1718895847](https://github.com/Akshat-sGit/Weather/assets/99307359/373dc16c-3adb-4ca1-8f8c-ff05e2d68db6)
+<img src="https://github.com/Akshat-sGit/Weather/assets/99307359/befd816f-6fbf-400c-a847-60257ffd0190" width="300">
+<img src="https://github.com/Akshat-sGit/Weather/assets/99307359/f17b6083-8ff7-4bd4-8116-99300f62b109" width="300">
+
+### 3. Location Screen:    
+This is the main screen of the app where you can see the weather details of the current location. There are two icons at the top right corner: one to get back to the current location and another to navigate to the city screen, where you can search for any location's weather.
+
+<img src="https://github.com/Akshat-sGit/Weather/assets/99307359/3146789b-e63e-499c-bc34-1f0b122e0536" width="300">
 
 
 ## Conclusion 
-Developing this weather forecast application has been an exciting experience. It allowed me to sharpen my understanding of Flutter, while also integrating APIs to fetch and display real-time data. This project was completed as an assignment for Spiderweb Technologies. I am confident that this app demonstrates my technical skills and attention to detail. I look forward to any feedback and hope that you find this application as useful and engaging as I intended it to be. Thank you for the opportunity!
-
-
-
-
-
-
-
-   
+Developing this weather forecast application has been an exciting experience. It allowed me to sharpen my understanding of Flutter, while also integrating APIs to fetch and display real-time data. I am confident that this app demonstrates my technical skills and attention to detail. I look forward to any feedback and hope that you find this application as useful and engaging as I intended it to be. Thank you for the opportunity!
